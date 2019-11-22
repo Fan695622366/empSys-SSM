@@ -40,13 +40,16 @@
 
 	<!-- 配置注解驱动器 -->
 	<mvc:annotation-driven></mvc:annotation-driven>
+	
+	<!--解决前端加载特殊文件,例如css,js等静态资源问题  -->
+	<mvc:default-servlet-handler/>
 
 	<!-- 配置视图解析器 -->
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 
 		<!-- 配置jstl的支持 -->
-
+	
 		<property name="prefix" value="/jsp/"></property>
 		<property name="suffix" value=".jsp"></property>
 	</bean>

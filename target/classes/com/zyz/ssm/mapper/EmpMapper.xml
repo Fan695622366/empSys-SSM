@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.zyz.ssm.mapper.EmpMapper">
+
+	<resultMap type="Emp" id="empResultMap">
+	
+		<!--id标签配置数据库中表的主键字段  -->
+		<id property="id" column="id"/>
+			
+		<!--result标签配置数据库中表的非主键字段 -->
+		<result property="username" column="username" />
+		<result property="password" column="password" />
+		<result property="gender" column="gender" />
+		<result property="age" column="age" />
+		<result property="hiredate" column="hiredate" />
+		<result property="salary" column="salary" />
+		<result property="phone" column="phone" />
+		<result property="email" column="email" />
+		<result property="active" column="avtive" />
+	
+	</resultMap>
+	<!--通过标签书写sql语句  -->
+	<select id="findEmpByNameAndPassword" parameterType="java.lang.String" resultMap="empResultMap">
+		
+		select * from emp where username=#{username} and password=#{password}
+		
+	</select>
+	
+	
+
+</mapper>
