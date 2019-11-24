@@ -14,4 +14,10 @@ public interface EmpMapper {
 	 */
 	Emp findEmpByNameAndPassword(@Param("username")String username, @Param("password")String password);
 
+	/**
+	 * 注册功能
+	 * @param emp
+	 */
+	void register(Emp emp);
+
 }

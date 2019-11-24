@@ -4,20 +4,18 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>登录页面</title>
+<title>欢迎使用员工管理系统</title>
 </head>
 <body>
 
-	<form action="${pageContext.request.contextPath}/empAction/login.action" method="post">
-		<input type="text" name="username" placeholder="用户名" />
+	<form action="${pageContext.request.contextPath }/empAction/login.action" method="post">
+	
+		<input type="text" name="username" placeholder="用户名"/>
 		<br/>
 		<input type="password" name="password" placeholder="密码"/>
-		<br/>		
+		<br/>
 		<input type="submit"/>
 	</form>
-	
-	${empMsg }
-	
 
 </body>
 </html>

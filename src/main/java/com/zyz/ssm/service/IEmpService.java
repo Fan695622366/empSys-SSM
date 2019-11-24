@@ -10,5 +10,7 @@ public interface IEmpService {
 	 * @param password
 	 */
 	Emp login(String name,String password);
+
+	void register(Emp emp);
 	
 }

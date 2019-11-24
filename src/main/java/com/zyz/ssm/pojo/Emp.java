@@ -12,11 +12,8 @@ import java.util.Date;
 @SuppressWarnings("serial")
 public class Emp implements Serializable {
 
-	/**
-	 * 
-	 */
 	private Integer id;
-	private String username;
+	private String username;// 用户名
 	private String password;
 	private String gender;
 	private Integer age;
@@ -25,12 +22,28 @@ public class Emp implements Serializable {
 	private String phone;
 	private String email;
 	private String img;
+	private Integer active;
 
+	// 无参
 	public Emp() {
 	}
 
+	/**
+	 * 完整的emp对象
+	 * 
+	 * @param id
+	 * @param username
+	 * @param password
+	 * @param gender
+	 * @param age
+	 * @param hiredate
+	 * @param salary
+	 * @param phone
+	 * @param email
+	 * @param img
+	 */
 	public Emp(Integer id, String username, String password, String gender, Integer age, Date hiredate, Double salary,
-			String phone, String email, String img) {
+			String phone, String email, String img, Integer active) {
 		super();
 		this.id = id;
 		this.username = username;
@@ -42,6 +55,7 @@ public class Emp implements Serializable {
 		this.phone = phone;
 		this.email = email;
 		this.img = img;
+		this.active = active;
 	}
 
 	public Integer getId() {
@@ -124,11 +138,12 @@ public class Emp implements Serializable {
 		this.img = img;
 	}
 
-	@Override
-	public String toString() {
-		return "Emp [id=" + id + ", username=" + username + ", password=" + password + ", gender=" + gender + ", age="
-				+ age + ", hiredate=" + hiredate + ", salary=" + salary + ", phone=" + phone + ", email=" + email
-				+ ", img=" + img + "]";
+	public Integer getActive() {
+		return active;
+	}
+
+	public void setActive(Integer active) {
+		this.active = active;
 	}
 
 	@Override
@@ -139,6 +154,13 @@ public class Emp implements Serializable {
 	@Override
 	public boolean equals(Object obj) {
 		return super.equals(obj);
+	}
+
+	@Override
+	public String toString() {
+		return "Emp [id=" + id + ", username=" + username + ", password=" + password + ", gender=" + gender + ", age="
+				+ age + ", hiredate=" + hiredate + ", salary=" + salary + ", phone=" + phone + ", email=" + email
+				+ ", img=" + img + ", active=" + active + "]";
 	}
 
 }

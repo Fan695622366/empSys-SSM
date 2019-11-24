@@ -22,4 +22,9 @@ public class EmpService implements IEmpService {
 		return empMapper.findEmpByNameAndPassword(username, password);
 	}
 
+	@Override
+	public void register(Emp emp) {
+		empMapper.register(emp);
+	}
+
 }

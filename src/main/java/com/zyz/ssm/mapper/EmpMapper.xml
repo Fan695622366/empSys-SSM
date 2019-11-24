@@ -28,6 +28,11 @@
 		
 	</select>
 	
+	<insert id="register" parameterType="Emp">
 	
+		insert into emp(id,username,password,gender,age,hiredate,salary,phone,email,active) values(null,#{username},#{password},#{gender},#{age},#{hiredate},#{salary},#{phone},#{email},0)
+		
+	</insert>
+
 
 </mapper>
