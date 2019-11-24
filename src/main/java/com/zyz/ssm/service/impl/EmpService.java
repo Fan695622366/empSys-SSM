@@ -1,5 +1,7 @@
 package com.zyz.ssm.service.impl;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
@@ -25,6 +27,11 @@ public class EmpService implements IEmpService {
 	@Override
 	public void register(Emp emp) {
 		empMapper.register(emp);
+	}
+
+	@Override
+	public List<Emp> findAllEmp() {
+		return empMapper.findAllEmp();
 	}
 
 }

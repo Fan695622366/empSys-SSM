@@ -1,5 +1,7 @@
 package com.zyz.ssm.mapper;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Param;
 
 import com.zyz.ssm.pojo.Emp;
@@ -19,5 +21,11 @@ public interface EmpMapper {
 	 * @param emp
 	 */
 	void register(Emp emp);
+
+	/**
+	 * 查看员工列表
+	 * @return
+	 */
+	List<Emp> findAllEmp();
 
 }

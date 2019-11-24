@@ -17,7 +17,7 @@ public class Emp implements Serializable {
 	private String password;
 	private String gender;
 	private Integer age;
-	private Date hiredate;
+	private String hiredate;
 	private Double salary;
 	private String phone;
 	private String email;
@@ -42,7 +42,7 @@ public class Emp implements Serializable {
 	 * @param email
 	 * @param img
 	 */
-	public Emp(Integer id, String username, String password, String gender, Integer age, Date hiredate, Double salary,
+	public Emp(Integer id, String username, String password, String gender, Integer age, String hiredate, Double salary,
 			String phone, String email, String img, Integer active) {
 		super();
 		this.id = id;
@@ -98,11 +98,11 @@ public class Emp implements Serializable {
 		this.age = age;
 	}
 
-	public Date getHiredate() {
+	public String getHiredate() {
 		return hiredate;
 	}
 
-	public void setHiredate(Date hiredate) {
+	public void setHiredate(String hiredate) {
 		this.hiredate = hiredate;
 	}
 

@@ -1,5 +1,7 @@
 package com.zyz.ssm.service;
 
+import java.util.List;
+
 import com.zyz.ssm.pojo.Emp;
 
 public interface IEmpService {
@@ -11,6 +13,17 @@ public interface IEmpService {
 	 */
 	Emp login(String name,String password);
 
+	/**
+	 * 登陆功能
+	 * @param emp
+	 */
 	void register(Emp emp);
+
+	/**
+	 * 查看员工列表
+	 * @return
+	 */
+	List<Emp> findAllEmp();
+
 	
 }

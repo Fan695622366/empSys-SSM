@@ -21,16 +21,16 @@
 		<br/>
 		<input type="password"  id="pwd2" placeholder="请再次输入密码"/>
 		<br/>
-		性别:<input type="radio" name="gender" value="f">女 &emsp;&emsp;
-			<input type="radio" name="gender" value="m">男
+		性别:<input type="radio" name="gender" value="女">女 &emsp;&emsp;
+			<input type="radio" name="gender" value="男">男
 		<br/>
 		年龄:<input type="number" name="age" required="required">
 		<br/>
-		入职日期:<input id="dd" type="text" name="hiredate"/>
+		入职日期:<input type="text" name="hiredate" class="easyui-datebox" required="required"/>
 		<br/>
 		工薪:<input type="text" name="salary" required="required" />
 		<br/>
-		电话:<input type="text" class="easyui-numberbox" name="phone" required="required"></input>  
+		电话:<input type="text" id="nn"></input>  
 		<br/>
 		邮箱:<input type="email" name="email" id="email" required="required" />
 		<br/>
@@ -40,8 +40,9 @@
 </body>
 <script type="text/javascript">
 
-	$('#dd').datebox({    
-    	required:true
+	$('#nn').numberbox({    
+	 	required:true,
+		validType:['length[8,14]']
 	});  
 
 </script>

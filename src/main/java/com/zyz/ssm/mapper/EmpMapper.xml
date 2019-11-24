@@ -34,5 +34,10 @@
 		
 	</insert>
 
+	<select id="findAllEmp" resultMap="empResultMap">
+	
+		select * from emp;
+	
+	</select>
 
 </mapper>

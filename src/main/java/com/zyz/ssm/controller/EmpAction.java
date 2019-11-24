@@ -1,5 +1,7 @@
 package com.zyz.ssm.controller;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
@@ -65,7 +67,18 @@ public class EmpAction {
 		
 	}
 	
-	
+	@RequestMapping(value="/findAllEmp")
+	public ModelAndView findAllEmp() {
+		
+		ModelAndView mav = new ModelAndView();
+		
+		List<Emp> empList = empService.findAllEmp();
+		
+		mav.addObject("empList", empList);
+		mav.setViewName("/empList");
+		
+		return mav;
+	}
 	
 	
 	
